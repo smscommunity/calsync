@@ -204,7 +204,7 @@ const syncEvents = async () => {
         const existingDiscordEvent = discordEvents.find(
           (discordEvent) =>
             calEvent.summary !== undefined &&
-            discordEvent.name == calEvent.summary
+            discordEvent.name == calEvent.summary,
         );
         if (existingDiscordEvent) {
           if (compareEvents(discordEvent, existingDiscordEvent)) {
