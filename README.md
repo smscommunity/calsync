@@ -21,4 +21,4 @@ variables or in `.env.` file in the root of the repository.
 
 ## Discord bot permissions
 
-The Discord bot needs permissions to view channels, and to manage events.
+The Discord bot needs permissions to view channels, and to manage events. Create one yourself.
