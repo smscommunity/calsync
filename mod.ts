@@ -112,7 +112,7 @@ const calendarToDiscordEvent = (
       }
       break;
   }
-  const description: string = `${calEvent.description ?? ""}\nCalendar event link: ${calEvent.htmlLink}`.trim();
+  const description: string = `${calEvent.description ?? ""}`.trim();
 
   const discordEventData: CreateEventRequestData | PatchEventRequestData = {
     name: calEvent.summary,
@@ -203,8 +203,8 @@ const syncEvents = async () => {
 
         const existingDiscordEvent = discordEvents.find(
           (discordEvent) =>
-            calEvent.htmlLink !== undefined &&
-            discordEvent.description.endsWith(calEvent.htmlLink),
+            calEvent.summary !== undefined &&
+            discordEvent.name == calEvent.summary
         );
         if (existingDiscordEvent) {
           if (compareEvents(discordEvent, existingDiscordEvent)) {
