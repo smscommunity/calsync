@@ -208,8 +208,8 @@ const syncEvents = async () => {
             console.log(calEvent.summary);
             console.log(discordEvent.name);
             return calEvent.summary !== undefined &&
-              discordEvent.name == calEvent.summary
-          }
+              discordEvent.name == calEvent.summary;
+          },
         );
         if (existingDiscordEvent) {
           if (compareEvents(discordEvent, existingDiscordEvent)) {
